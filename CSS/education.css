@@ -1,0 +1,107 @@
+/*start of base and mobile styles */
+
+body{background-color:#D3D3D3;
+     font-family: Arial, sans-serif;
+      margin: 0 auto;
+      padding: 0;}
+ .Education-grid{ width:80%;
+                margin:50px auto;
+                border:1px solid #ccc;
+                padding:20px;
+                border-radius:5px;
+                overflow:hidden;
+                }
+.primary{ box-shadow: 0 0 10px rgba(0, 255,0, 0.5);}
+ 
+.primary:hover{transform: translate(0,-5px);/* Move up slightly */}
+
+.junior{ box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Red shadow */}
+.junior:hover{transform: translate(0,-5px);/* Move up slightly */}
+
+.secondary{ box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green shadow */}
+      
+.secondary:hover{transform: translate(0,-5px);/* Move up slightly */}
+
+.higher{box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Blue shadow */}
+.higher:hover{transform: translate(0,-5px);/* Move up slightly */}
+
+.current{box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Red shadow */}
+
+.primary{color:#FFA500;
+         }
+ .junior{color:#FFA500;
+         }
+.secondary{color:#FFA500;
+            }
+.higher{color:#FFA500;
+        }
+
+.Ielts{color:#FFA500;}
+.Ielts:hover{transform: translate(0,-5px);/* Move up slightly */}
+.current{color:#FFA500;}          
+.current:hover{transform: translate(0,-5px);/* Move up slightly */}
+.container-footer{background-color:#CCCCCC;
+                  color:black;
+}
+a.active {
+    color: blue;}
+@media only screen and (min-width: 992px){
+
+body{background-color:#E6F3FF;
+     font-family: Arial, sans-serif;
+      margin: 0 auto;
+      padding: 0;
+     }
+.Education-grid{display:grid;
+                grid-template-columns:auto auto;
+                width:80%;
+                margin:50px auto;
+                border:1px solid #ccc;
+                padding:20px;
+                border-radius:5px;
+                overflow:hidden;
+                }
+
+.primary{ box-shadow: 0 0 20px rgba(165, 42, 42, 0.5);}
+ .primary:hover{transform: translate(0,-5px);/* Move up slightly */}
+
+.junior{box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Red shadow */}
+
+.junior:hover{transform: translate(0,-5px);/* Move up slightly */}
+
+.secondary{ box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Green shadow */}
+      
+.secondary:hover{transform: translate(0,-5px);/* Move up slightly */}
+
+.higher{ box-shadow: 0 0 20px rgba(0, 0, 255, 0.5); /* Blue shadow */}
+.higher:hover{transform: translate(0,-5px);/* Move up slightly */}
+
+
+ .Ielts{box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Red shadow */}
+.Ielts:hover{transform: translate(0,-5px);/* Move up slightly */}
+.current{box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Red shadow */}
+.current:hover{transform: translate(0,-5px);/* Move up slightly */}  
+
+.primary{color:#FFA500;
+         grid-column:1/2;}
+ .junior{color:#FFA500;
+         grid-column:2/2;}
+.secondary{color:#FFA500;
+            grid-column:1/2;}
+.higher{color:#FFA500;
+        grid-column:2/2;}
+.Ielts{color:#FFA500;}
+.current{color:#FFA500;}
+
+.container-footer{color:black;
+                  display:grid;
+                  grid-template-columns:auto auto auto;
+                  background-color:#87CEEB;
+}
+.contacts{grid-column:1/3;}
+.Contacts{grid-column:2/3;}
+.email{grid-column:3/3;}
+}
+
+a.active {
+    color: blue;}

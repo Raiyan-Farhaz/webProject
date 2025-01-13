@@ -1,0 +1,11 @@
+/* start of base and mobile styles */
+body(background-colour:#7FFFD4;)
+h1 {
+background-color:purple;
+}
+.header {background-color: aqua;
+            grid-column: 1/4;}
+.wtf {background-color: blue;}
+.Wo{background-color: beige;}
+.last{background-color: orange;}
+}

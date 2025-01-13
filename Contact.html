@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="CSS/contact.css">
+
+        
+
+<title>Personal Profile</title>
+ 
+
+    
+<script>
+               function processForm(event) {
+            if (!validateForm()) {
+                event.preventDefault();
+            }
+        } 
+      
+           function validateForm() {
+            const errors = document.querySelectorAll('.error');
+            
+            for (let i = 0; i < errors.length; i++) {
+                errors[i].innerHTML = '';
+            }           
+            const name = document.getElementById('name').value.trim();
+            const companyName = document.getElementById('companyName').value.trim();
+            const companyWebsite = document.getElementById('companyWebsite').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const retype = document.getElementById('retype').value.trim();
+            const query=  document.getElementById('query').value.trim();
+
+            let isValid = true;
+
+
+                        // Validation rules
+            if (name == '') {
+                document.getElementById('errorName').innerHTML = '*Please enter your name';
+                isValid = false;
+            } else if (name.length > 20) {
+                document.getElementById('errorName').innerHTML = '*Name cannot exceed 20 characters';
+                isValid = false;
+            }
+
+            if (companyName==null || companyName == '') {
+                document.getElementById('errorCN').innerHTML = '*Please enter your company name';
+                isValid = false;
+            } 
+
+            if (!/^(https?:\/\/)?([\w.]+)\.([a-z]{2,})(\/[\w-]*)*\/?$/i.test(companyWebsite)) {
+                document.getElementById('website').innerHTML = '*Enter valid URL';
+                isValid = false;
+            }
+            else if (companyWebsite=='' ){
+                document.getElementById('website').innerHTML='*Enter URL';
+               isValid = false;
+             }
+
+            if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
+                document.getElementById('errorEmail').innerHTML = '*Please enter a valid email address';
+                isValid = false;
+            }
+            
+            else if (email=='' ){
+                document.getElementById('errorEmail').innerHTML='*Enter email addrress';
+               isValid = false;
+             }
+
+
+            if (email !== retype) {
+                document.getElementById('errorRetype').innerHTML = '*Email addresses do not match';
+                isValid = false;
+            }
+
+           else if (retype == '') {
+           document.getElementById('errorRetype').innerHTML = '*Retype email address';
+           isValid = false;
+            }
+          
+         if (query == '') {
+                document.getElementById('errorQuery').innerHTML = '*Please enter your query';
+                isValid = false;}
+            return isValid;
+        }
+</script>
+</head>
+<body>
+<header>
+<div class="top-nav">
+        
+        <div class="links">
+        
+          <!--first row --> 
+         
+               <a href="Index.html">Home</a> 
+               <a href="Education.html">Education</a> 
+               <a href="CurrentCourse.html">CurrentCourse</a> 
+               <a href="Projects.html">Projects</a>
+               <a href="Interests.html">Interests</a>
+               <a href="AreasInterested.html">Areas</a>
+               <a href="#" class="active">Contact</a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+             <i class="fa fa-bars"></i>
+             </a>
+        
+       </div>
+   </div>
+</header>
+
+<p id="time1">date and time go here</p>
+<script>
+const now =new Date();
+document.getElementById("time1").innerHTML =
+now;
+</script> 
+
+    <h2>Contact Form </h2>
+    <form id="myForm" action="https://tustprojects.net/rdwd-contact-response.php" method="post" novalidate>
+        <p><label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <span id="errorName" class="error"></span></p>
+
+        <p><label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" name="companyName">
+        <span id="errorCN" class="error"></span></p>
+
+       <p> <label for="companyWebsite">Company Website:</label>
+        <input type="url" id="companyWebsite" name="companyWebsite">
+        <span id="website" class="error"></span></p>
+
+       <p> <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="errorEmail" class="error"></span></p>
+
+        <p><label for="retype">Retype Email Address:</label>
+        <input type="email" id="retype" name="retype">
+        <span id="errorRetype" class="error"></span></p>
+      
+        <p><label for="query">Your query is:</label>
+        <input type="text" id="query" name="query">
+        <span id="errorQuery" class="error"></span></p>
+
+
+        <input type="reset" name="reset" id="reset" value="Reset">
+
+        <input type="submit" name="submit" id="submit" value="Submit">
+    </form>
+
+<footer>
+<div class="container-footer"> 
+
+            
+	    <div class="contacts">
+               <p>Contact on Facebook:<a href="https://www.facebook.com/raiyanfarhaz.akush?mibextid=ZbWKwL">Raiyan Farhaz Akush</a></p>
+             © Raiyan Farhaz. All rights reserved.
+             </div>
+            
+              <div class="Contacts"> 
+                <p>Phone:+353 851541618<br></p>
+             </div>
+              <div class="email">
+                <p>Email:<br>jemy60033@gmail.com<br> </p>
+              </div>
+	     </div>
+</footer>
+        <script>
+        // Adding event listener to the form
+        document.getElementById('myForm').addEventListener('submit', processForm);
+    </script>
+</body>
+</html>
